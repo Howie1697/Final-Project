@@ -1,4 +1,79 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-
+	<meta charset="utf-8">
+  <title>Daily Motivation</title>
+  <link rel="stylesheet" media="screen" href="vendor/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="style.css">
 </head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header text-danger">
+        <h1>Daily Motivation Quotes</h1>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Whenever you need help it is just a click away.</div>
+        <div class="card-text">
+          <form action="" id="inspiration-form">
+            <div class="form-group">
+              <label>Motivation</label>
+              <textarea id="Quote" type="text" class="form-control"></textarea>
+            </div>
+            <button id ='grabQuote' type="submit" class="btn btn-primary">Click for Happiness</button>
+            <button id= 'saveQuote' type= "save" class = "btn btn-secondary">Click to save qoute</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Quote Board</div>
+        <div class="card-text">
+          <ul class="quote-board">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <div class="card-title">Saved Quotes</div>
+          <div class="card-text">
+            <ul class="saved-quotes">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  <script type="text/javascript" src="vendor/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCxLff2T0vQIUPHUGha1-4qExIuj03vXHg",
+    authDomain: "inspirational-qoute.firebaseapp.com",
+    databaseURL: "https://inspirational-qoute-default-rtdb.firebaseio.com",
+    projectId: "inspirational-qoute",
+    storageBucket: "inspirational-qoute.appspot.com",
+    messagingSenderId: "472170998689",
+    appId: "1:472170998689:web:850d5f5b680987febe79e0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+  <script type="text/javascript" src="quote.js"></script>
+</body>
+</html>
